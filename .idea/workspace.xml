@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0151c3f-b6c0-436f-87f5-6f782c2868e7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/modelos/Conversion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/modelos/ConversionDeMoneda.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/servicios/ConsultaConversionDeMoneda.java" afterDir="false" />
+    <list default="true" id="a0151c3f-b6c0-436f-87f5-6f782c2868e7" name="Changes" comment="Proyecto Funcional">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conversor-de-monedas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/conversor-de-monedas.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/principal/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/principal/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/servicios/ConsultaConversionDeMoneda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/servicios/ConsultaConversionDeMoneda.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +26,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "gabrielledezma21"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/gabrielledezma21/conversor-de-monedas.git",
+    "accountId": "bb7c05c2-0d77-4132-8bb3-7204d32fc8c8"
+  }
+}]]></component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -94,6 +103,19 @@
       <option name="presentableId" value="Default" />
       <updated>1728708828242</updated>
     </task>
+    <task id="LOCAL-00001" summary="Proyecto Funcional">
+      <option name="closed" value="true" />
+      <created>1728720710239</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728720710239</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Proyecto Funcional" />
+    <option name="LAST_COMMIT_MESSAGE" value="Proyecto Funcional" />
   </component>
 </project>

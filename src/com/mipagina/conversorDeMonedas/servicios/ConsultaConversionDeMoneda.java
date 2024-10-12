@@ -26,4 +26,57 @@ public class ConsultaConversionDeMoneda {
             throw new RuntimeException("No encontré la conversión entre esas monedas.");
         }
     }
+
+    public void convertir(Integer opcion, Double montoAConvertir){
+
+        String monedaInicial="";
+        String monedaFinal="";
+        switch(opcion){
+            case 1:
+                monedaInicial="ARS";
+                monedaFinal="USD";
+                break;
+            case 2:
+                monedaInicial="ARS";
+                monedaFinal="USD";
+                break;
+            case 3:
+                monedaInicial="USD";
+                monedaFinal="ARS";
+                break;
+            case 4:
+                monedaInicial="USD";
+                monedaFinal="EUR";
+                break;
+            case 5:
+                monedaInicial="EUR";
+                monedaFinal="ARS";
+                break;
+            case 6:
+                monedaInicial="EUR";
+                monedaFinal="USD";
+                break;
+
+        }
+        Conversion conversion = buscaConversionDeMoneda(monedaInicial,monedaFinal, montoAConvertir);
+        System.out.println("Sus $"+montoAConvertir+" "+moneda(monedaInicial)
+                +" equivalen a: $"+conversion.getResultado()+" "+moneda(monedaFinal));
+    }
+
+    public  String moneda(String abreviacion){
+        String resultado="";
+        switch(abreviacion){
+            case "ARS":
+                resultado="pesos argentinos";
+                break;
+            case "EUR":
+                resultado="euros";
+                break;
+            case "USD":
+                resultado="dólares estadounidenses";
+                break;
+        }
+        return resultado;
+    }
 }
+
