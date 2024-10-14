@@ -35,5 +35,28 @@ public class Conversor {
         return this.montoAConvertir * this.tipoDeCambio;
     }
 
+    public String toString(){
+        return "Sus $" + montoAConvertir
+                + " " + stringDeMoneda(monedaInicial)
+                + " equivalen a: $"
+                + resultado
+                + " " + stringDeMoneda(monedaFinal);
+    }
 
+    //podria utilizar en lugar de resultado, getResultadoCalculado
+
+    public  String stringDeMoneda(String abreviacion){
+        return switch(abreviacion) {
+            case "ARS" -> "pesos argentinos";
+            case "EUR" -> "euros";
+            case "USD" -> "dólares estadounidenses";
+            case "BRL" -> "reales brasileños";
+            case "CLP" -> "pesos chilenos";
+            case "COP" -> "pesos colombianos";
+            case "PYG" -> "guaraníes";
+            case "UYU" -> "pesos uruguayos";
+            case "PEN" -> "soles";
+            default -> "";
+        };
+    }
 }

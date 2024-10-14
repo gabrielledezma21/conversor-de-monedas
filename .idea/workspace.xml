@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0151c3f-b6c0-436f-87f5-6f782c2868e7" name="Changes" comment="Proyecto con funciones básicas listo">
+    <list default="true" id="a0151c3f-b6c0-436f-87f5-6f782c2868e7" name="Changes" comment="Mas opciones en el menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/modelos/Conversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/modelos/Conversor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/modelos/Conversor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/modelos/Conversor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/principal/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/principal/Principal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/servicios/ConsultaConversionDeMoneda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/servicios/ConsultaConversionDeMoneda.java" afterDir="false" />
     </list>
@@ -121,12 +121,21 @@
       <option name="project" value="LOCAL" />
       <updated>1728721730426</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Mas opciones en el menu">
+      <option name="closed" value="true" />
+      <created>1728929752743</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728929752743</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Proyecto Funcional" />
     <MESSAGE value="Proyecto con funciones básicas listo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Proyecto con funciones básicas listo" />
+    <MESSAGE value="Mas opciones en el menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mas opciones en el menu" />
   </component>
 </project>

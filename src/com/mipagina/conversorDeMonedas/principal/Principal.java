@@ -1,7 +1,10 @@
 package com.mipagina.conversorDeMonedas.principal;
 
+import com.mipagina.conversorDeMonedas.modelos.Conversor;
 import com.mipagina.conversorDeMonedas.servicios.ConsultaConversionDeMoneda;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Principal {
@@ -11,6 +14,7 @@ public class Principal {
         int monedaBase = -1;
         int monedaDestino = -1;
         Double monto = -1.0;
+        List<Conversor> conversiones = new ArrayList<>();
         System.out.println("Bienvenidos a nuestro conversor de monedas!!!");
         do{
             menu();
@@ -31,7 +35,9 @@ public class Principal {
                                         if (monto < 0.0) {
                                             System.out.println("El monto a convertir debe ser mayor a cero");
                                         } else {
-                                            consulta.convertir(monedaBase, monedaDestino, monto);
+                                            Conversor c = consulta.convertir(monedaBase, monedaDestino, monto);
+                                            conversiones.add(c);
+                                            System.out.println(c.toString());
                                         }
                                     } catch (NumberFormatException e) {
                                         System.out.println("El caracter ingresado no es un número.");
@@ -44,6 +50,8 @@ public class Principal {
 
                     }while(monedaDestino < 1 || monedaDestino > 9);
 
+                } else if(monedaBase == 0){
+                    System.out.println("Gracias por confiar en nosotros! Hasta pronto!");
                 } else {
                     System.out.println("Opción incorrecta.");
                 }
@@ -52,7 +60,7 @@ public class Principal {
                 System.out.println("El caracter ingresado no es un número.");
             }
         }while(monedaBase != 0);
-        System.out.println("Gracias por confiar en nosotros! Hasta pronto!");
+
 
     }
 
