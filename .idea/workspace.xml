@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0151c3f-b6c0-436f-87f5-6f782c2868e7" name="Changes" comment="Proyecto Funcional">
+    <list default="true" id="a0151c3f-b6c0-436f-87f5-6f782c2868e7" name="Changes" comment="Proyecto con funciones básicas listo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/modelos/Conversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/modelos/Conversor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/principal/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/principal/Principal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/servicios/ConsultaConversionDeMoneda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/servicios/ConsultaConversionDeMoneda.java" afterDir="false" />
     </list>
@@ -26,18 +27,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "gabrielledezma21"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;gabrielledezma21&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/gabrielledezma21/conversor-de-monedas.git",
-    "accountId": "bb7c05c2-0d77-4132-8bb3-7204d32fc8c8"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/gabrielledezma21/conversor-de-monedas.git&quot;,
+    &quot;accountId&quot;: &quot;bb7c05c2-0d77-4132-8bb3-7204d32fc8c8&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -56,6 +57,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/ferna/Downloads/gson-2.11.0.jar",
     "project.structure.last.edited": "Modules",
@@ -111,11 +113,20 @@
       <option name="project" value="LOCAL" />
       <updated>1728720710239</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Proyecto con funciones básicas listo">
+      <option name="closed" value="true" />
+      <created>1728721730426</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728721730426</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Proyecto Funcional" />
-    <option name="LAST_COMMIT_MESSAGE" value="Proyecto Funcional" />
+    <MESSAGE value="Proyecto con funciones básicas listo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Proyecto con funciones básicas listo" />
   </component>
 </project>

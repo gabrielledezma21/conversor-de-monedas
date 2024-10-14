@@ -1,7 +1,7 @@
 package com.mipagina.conversorDeMonedas.servicios;
 
 import com.google.gson.Gson;
-import com.mipagina.conversorDeMonedas.modelos.Conversion;
+import com.mipagina.conversorDeMonedas.modelos.Conversor;
 import com.mipagina.conversorDeMonedas.modelos.ConversionDeMoneda;
 
 import java.net.URI;
@@ -10,7 +10,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class ConsultaConversionDeMoneda {
-    public Conversion buscaConversionDeMoneda(String monedaInicial, String monedaFinal, Double montoAConvertir){
+    public Conversor buscaConversionDeMoneda(String monedaInicial, String monedaFinal, Double montoAConvertir){
         String miClave = "fa6965953df7e078c50edb46";
         URI direccion = URI.create("https://v6.exchangerate-api.com/v6/"+miClave+"/pair/"+monedaInicial+"/"+monedaFinal+"/"+montoAConvertir);
         HttpClient client = HttpClient.newHttpClient();
@@ -21,49 +21,69 @@ public class ConsultaConversionDeMoneda {
             HttpResponse<String> response = client
                     .send(request, HttpResponse.BodyHandlers.ofString());
             ConversionDeMoneda miConversion = new Gson().fromJson(response.body(),ConversionDeMoneda.class);
-            return new Conversion(miConversion,montoAConvertir);
+            return new Conversor(miConversion,montoAConvertir);
         } catch (Exception e) {
             throw new RuntimeException("No encontré la conversión entre esas monedas.");
         }
     }
 
-    public void convertir(Integer opcion, Double montoAConvertir){
+    public void convertir(Integer monedaBase, Integer monedaDestino, Double montoAConvertir){
 
-        String monedaInicial="";
-        String monedaFinal="";
-        switch(opcion){
+        String monedaInicial=moneda(monedaBase);
+        String monedaFinal=moneda(monedaDestino);
+
+        String salida1="Sus $"+montoAConvertir+" de "+stringDeMoneda(monedaInicial)
+                +" equivalen a: $";
+        String salida2=" "+stringDeMoneda(monedaFinal);
+        Double resultado = montoAConvertir;
+        //Double resultado2 = 0.0;
+        if(monedaBase != monedaDestino){
+            Conversor conversion = buscaConversionDeMoneda(monedaInicial,monedaFinal, montoAConvertir);
+            resultado = conversion.getResultado();
+            //resultado2 = conversion.getResultadoCalculado();
+
+
+        }
+        System.out.println(salida1+resultado+salida2);
+        //System.out.println(salida1+resultado2+salida2);
+    }
+
+    public String moneda(Integer numMoneda){
+        String resultado="";
+        switch(numMoneda){
             case 1:
-                monedaInicial="ARS";
-                monedaFinal="USD";
+                resultado = "ARS";
                 break;
             case 2:
-                monedaInicial="ARS";
-                monedaFinal="USD";
+                resultado = "USD";
                 break;
             case 3:
-                monedaInicial="USD";
-                monedaFinal="ARS";
+                resultado = "EUR";
                 break;
             case 4:
-                monedaInicial="USD";
-                monedaFinal="EUR";
+                resultado = "BRL";
                 break;
             case 5:
-                monedaInicial="EUR";
-                monedaFinal="ARS";
+                resultado = "CLP";
                 break;
             case 6:
-                monedaInicial="EUR";
-                monedaFinal="USD";
+                resultado = "COP";
+                break;
+            case 7:
+                resultado = "PYG";
+                break;
+            case 8:
+                resultado = "UYU";
+                break;
+            case 9:
+                resultado = "PEN";
                 break;
 
         }
-        Conversion conversion = buscaConversionDeMoneda(monedaInicial,monedaFinal, montoAConvertir);
-        System.out.println("Sus $"+montoAConvertir+" "+moneda(monedaInicial)
-                +" equivalen a: $"+conversion.getResultado()+" "+moneda(monedaFinal));
+        return resultado;
     }
 
-    public  String moneda(String abreviacion){
+    public  String stringDeMoneda(String abreviacion){
         String resultado="";
         switch(abreviacion){
             case "ARS":
@@ -74,6 +94,24 @@ public class ConsultaConversionDeMoneda {
                 break;
             case "USD":
                 resultado="dólares estadounidenses";
+                break;
+            case "BRL":
+                resultado="reales brasileños";
+                break;
+            case "CLP":
+                resultado="pesos chilenos";
+                break;
+            case "COP":
+                resultado="pesos colombianos";
+                break;
+            case "PYG":
+                resultado="guaraníes";
+                break;
+            case "UYU":
+                resultado="pesos uruguayos";
+                break;
+            case "PEN":
+                resultado="soles";
                 break;
         }
         return resultado;

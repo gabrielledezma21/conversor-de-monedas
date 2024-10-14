@@ -1,13 +1,13 @@
 package com.mipagina.conversorDeMonedas.modelos;
 
-public class Conversion {
+public class Conversor {
     private String monedaInicial;
     private String monedaFinal;
     private Double tipoDeCambio;
     private Double resultado;
     private Double montoAConvertir;
 
-    public Conversion(ConversionDeMoneda miConversion, Double montoAConvertir){
+    public Conversor(ConversionDeMoneda miConversion, Double montoAConvertir){
         this.monedaInicial = miConversion.base_code();
         this.monedaFinal = miConversion.target_code();
         this.tipoDeCambio = miConversion.conversion_rate();
@@ -30,4 +30,10 @@ public class Conversion {
     public Double getMontoAConvertir() {
         return montoAConvertir;
     }
+
+    public Double getResultadoCalculado(){
+        return this.montoAConvertir * this.tipoDeCambio;
+    }
+
+
 }
