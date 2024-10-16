@@ -1,18 +1,26 @@
 package com.mipagina.conversorDeMonedas.modelos;
 
+import java.time.DateTimeException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class Conversor {
     private String monedaInicial;
     private String monedaFinal;
     private Double tipoDeCambio;
     private Double resultado;
     private Double montoAConvertir;
+    private LocalDateTime fechaDeConversion;
+
 
     public Conversor(ConversionDeMoneda miConversion, Double montoAConvertir){
         this.monedaInicial = miConversion.base_code();
         this.monedaFinal = miConversion.target_code();
+        this.montoAConvertir = montoAConvertir;
         this.tipoDeCambio = miConversion.conversion_rate();
         this.resultado = miConversion.conversion_result();
-        this.montoAConvertir = montoAConvertir;
+        this.fechaDeConversion = LocalDateTime.now();
+
     }
 
     public Double getResultado() {
@@ -35,15 +43,19 @@ public class Conversor {
         return this.montoAConvertir * this.tipoDeCambio;
     }
 
+    public LocalDateTime getFechaDeConversion() {
+        return fechaDeConversion;
+    }
+
+    //podria utilizar en lugar de resultado, getResultadoCalculado
     public String toString(){
         return "Sus $" + montoAConvertir
                 + " " + stringDeMoneda(monedaInicial)
                 + " equivalen a: $"
                 + resultado
-                + " " + stringDeMoneda(monedaFinal);
+                + " " + stringDeMoneda(monedaFinal) + ". \n"
+                + "Resultado obtenido el: " + fechaDeConversion.format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"));
     }
-
-    //podria utilizar en lugar de resultado, getResultadoCalculado
 
     public  String stringDeMoneda(String abreviacion){
         return switch(abreviacion) {

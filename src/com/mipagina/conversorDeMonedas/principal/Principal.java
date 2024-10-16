@@ -40,8 +40,8 @@ public class Principal {
                                         } else {
                                             Conversor c = consulta.convertir(monedaBase, monedaDestino, monto);
                                             conversiones.add(c);
-                                            System.out.println(c.toString());
                                             generador.guardarJson(c);
+                                            System.out.println(c.toString());
                                         }
                                     } catch (NumberFormatException e) {
                                         System.out.println("El caracter ingresado no es un número.");
@@ -80,7 +80,7 @@ public class Principal {
                 6. Pesos Colombianos 
                 7. Guaraníes 
                 8. Pesos Uruguayos 
-                9. Soles 
+                9. Soles
                 0. Salir
                 
                 ********************
