@@ -49,12 +49,12 @@ public class Conversor {
 
     //podria utilizar en lugar de resultado, getResultadoCalculado
     public String toString(){
-        return "Sus $" + montoAConvertir
-                + " " + stringDeMoneda(monedaInicial)
-                + " equivalen a: $"
+        return stringDeMoneda(monedaInicial)
+                + " $" + montoAConvertir
+                + " = $"
                 + resultado
                 + " " + stringDeMoneda(monedaFinal) + ". \n"
-                + "Resultado obtenido el: " + fechaDeConversion.format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"));
+                + fechaDeConversion.format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"));
     }
 
     public  String stringDeMoneda(String abreviacion){

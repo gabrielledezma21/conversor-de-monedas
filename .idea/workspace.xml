@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0151c3f-b6c0-436f-87f5-6f782c2868e7" name="Changes" comment="Guarda cada conversión en un archivo json">
-      <change afterPath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/servicios/LocalDateTimeAdapter.java" afterDir="false" />
+    <list default="true" id="a0151c3f-b6c0-436f-87f5-6f782c2868e7" name="Changes" comment="Se le agrego la fecha y hora de cada conversion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/modelos/Conversor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/modelos/Conversor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/principal/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/principal/Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/servicios/GeneradorDeArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mipagina/conversorDeMonedas/servicios/GeneradorDeArchivo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729096679845</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Se le agrego la fecha y hora de cada conversion">
+      <option name="closed" value="true" />
+      <created>1729098143060</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1729098143060</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -155,7 +161,8 @@
     <MESSAGE value="Mas opciones en el menu" />
     <MESSAGE value="Correcion del detalle al salir, optimizacion de switch y creacion de lista de conversiones" />
     <MESSAGE value="Guarda cada conversión en un archivo json" />
-    <option name="LAST_COMMIT_MESSAGE" value="Guarda cada conversión en un archivo json" />
+    <MESSAGE value="Se le agrego la fecha y hora de cada conversion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se le agrego la fecha y hora de cada conversion" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
