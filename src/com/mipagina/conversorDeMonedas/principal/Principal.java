@@ -2,19 +2,22 @@ package com.mipagina.conversorDeMonedas.principal;
 
 import com.mipagina.conversorDeMonedas.modelos.Conversor;
 import com.mipagina.conversorDeMonedas.servicios.ConsultaConversionDeMoneda;
+import com.mipagina.conversorDeMonedas.servicios.GeneradorDeArchivo;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Principal {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner lectura = new Scanner(System.in);
         ConsultaConversionDeMoneda consulta = new ConsultaConversionDeMoneda();
         int monedaBase = -1;
         int monedaDestino = -1;
-        Double monto = -1.0;
+        double monto = -1.0;
         List<Conversor> conversiones = new ArrayList<>();
+        GeneradorDeArchivo generador = new GeneradorDeArchivo();
         System.out.println("Bienvenidos a nuestro conversor de monedas!!!");
         do{
             menu();
@@ -38,6 +41,7 @@ public class Principal {
                                             Conversor c = consulta.convertir(monedaBase, monedaDestino, monto);
                                             conversiones.add(c);
                                             System.out.println(c.toString());
+                                            generador.guardarJson(c);
                                         }
                                     } catch (NumberFormatException e) {
                                         System.out.println("El caracter ingresado no es un número.");
@@ -55,12 +59,10 @@ public class Principal {
                 } else {
                     System.out.println("Opción incorrecta.");
                 }
-
             } catch(NumberFormatException e){
                 System.out.println("El caracter ingresado no es un número.");
             }
         }while(monedaBase != 0);
-
 
     }
 
@@ -68,7 +70,7 @@ public class Principal {
         String menu = """
                 ********************
                 
-                Ingrese la moneda desde la cual desea convertir: 
+                Ingrese la moneda desde la cual desea convertir:  
                 
                 1. Pesos Argentinos
                 2. Dólares Estadounidenses
@@ -90,7 +92,7 @@ public class Principal {
         String menu = """
                 ********************
                 
-                Ingrese la moneda de destino: 
+                Ingrese la moneda de destino:  
                 
                 1. Pesos Argentinos
                 2. Dólares Estadounidenses
